@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-BOT_NAME = 'general'
+BOT_NAME = 'jobaware'
 
-SPIDER_MODULES = ['general.spiders']
-NEWSPIDER_MODULE = 'general.spiders'
+SPIDER_MODULES = ['jobaware.spiders']
+NEWSPIDER_MODULE = 'jobaware.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'topic (+http://www.yourdomain.com)'

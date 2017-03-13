@@ -8,7 +8,7 @@ class JobSpider(Spider):
     name = 'jobspider'
 
     def __init__(self, *args, **kwargs):
-        super(GeneralSpider, self).__init__(*args, **kwargs)
+        super(JobSpider, self).__init__(*args, **kwargs)
         self.le = LinkExtractor()
 
     def parse(self, response):
