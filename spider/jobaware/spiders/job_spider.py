@@ -15,8 +15,11 @@ class JobSpider(Spider):
         if not isinstance(response, HtmlResponse):
             return
 
-        for link in self.le.extract_links(response):
-            r = Request(url=link.url)
-            r.meta.update(link_text=link.text)
-            yield r
+        for url in response.meta['redirect_urls']:
+            logging.info('response.meta[redirect_urls]: %s' % url)        
+
+        # for link in self.le.extract_links(response):
+        #     r = Request(url=link.url)
+        #     r.meta.update(link_text=link.text)
+        #     yield r
 
