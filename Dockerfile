@@ -2,7 +2,7 @@ FROM python:2.7-alpine
 
 MAINTAINER Dan Sandland <dansandland@gmail.com>
 
-	# build dependencies
+    # build dependencies
 RUN apk --no-cache --virtual=build_dependencies add \
         gcc \
         g++ \
@@ -18,21 +18,21 @@ RUN apk --no-cache --virtual=build_dependencies add \
         py-pip \
 
     # ZeroMQ, postgres and others
-	&& apk --no-cache add \
-		zeromq \
-		postgresql \
-		postgresql-dev \
+    && apk --no-cache add \
+        zeromq \
+        postgresql \
+        postgresql-dev \
         git \
         bash \
         bash-doc \
         bash-completion \
 
-	# pip
+    # pip
     && pip install \
-    	Scrapy \
-    	frontera[distributed,zeromq,sql] \
-    	colorlog \
-    	psycopg2 \
+        Scrapy \
+        frontera[distributed,zeromq,sql] \
+        colorlog \
+        psycopg2 \
 
     # clean up
     && rm -rf ~/.cache/pip \

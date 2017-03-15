@@ -15,6 +15,8 @@ Build & Run:
 
 ```bash
 docker build -t jobspider . && docker run --name jobspider -dit jobspider
+# runs:
+# python -m frontera.contrib.messagebus.zeromq.broker
 ```
 
 ### Start DB Worker
